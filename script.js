@@ -13,16 +13,13 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-let scores;
-let currentScore;
-let activePlayer; //we are using this to change our plasyer status. using this we can change our status using $ in selector
-let playing;
+let scores, currentScore, activePlayer, playing;
 
 // Starting conditions
 const init = function () {
   scores = [0, 0];
   currentScore = 0;
-  activePlayer = 0;
+  activePlayer = 0; //we are using this to change our plasyer status. using this we can change our status using &
   playing = true;
 
   score0El.textContent = 0;
@@ -71,6 +68,7 @@ btnRoll.addEventListener('click', function () {
 });
 
 btnHold.addEventListener('click', function () {
+  //console.log('hello got this function');
   if (playing) {
     // 1. Add current score to active player's score
     scores[activePlayer] += currentScore;
