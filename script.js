@@ -13,7 +13,10 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-let scores, currentScore, activePlayer, playing;
+let scores;
+let currentScore;
+let activePlayer; //we are using this to change our plasyer status. using this we can change our status using $ in selector
+let playing;
 
 // Starting conditions
 const init = function () {
